@@ -4,11 +4,9 @@ public class LibraryItem {
     private String title, author;
     private int numberPages, yearPublish;
     private double price;
-    private ItemTypes libraryClass;
 
     // Constructor
-    public LibraryItem(String title, String author, int numberPages, int yearPublish, double price,
-            ItemTypes libraryClass) {
+    public LibraryItem(String title, String author, int numberPages, int yearPublish, double price) {
         this.title = title;
         this.author = author;
         this.numberPages = numberPages;
@@ -35,10 +33,6 @@ public class LibraryItem {
 
     public double getPrice() {
         return price;
-    }
-
-    public ItemTypes getlibraryClass() {
-        return libraryClass;
     }
 
     // Setters
