@@ -4,9 +4,11 @@ public class LibraryItem {
     private String title, author;
     private int numberPages, yearPublish;
     private double price;
+    private ItemTypes libraryClass;
 
     // Constructor
-    public LibraryItem(String title, String author, int numberPages, int yearPublish, double price) {
+    public LibraryItem(String title, String author, int numberPages, int yearPublish, double price,
+            ItemTypes libraryClass) {
         this.title = title;
         this.author = author;
         this.numberPages = numberPages;
@@ -35,6 +37,10 @@ public class LibraryItem {
         return price;
     }
 
+    public ItemTypes getlibraryClass() {
+        return libraryClass;
+    }
+
     // Setters
     public void setTitle(String title) {
         this.title = title;
@@ -48,12 +54,18 @@ public class LibraryItem {
         this.numberPages = numberPages;
     }
 
-    public void getPublish(int yearPublish) {
+    public void setPublish(int yearPublish) {
         this.yearPublish = yearPublish;
     }
 
-    public void getPrice(double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
+    @Override // Overriding to get Book informations
+    public String toString() {
+        return this.getTitle() + " ,  " + this.getAuthor() + " ,  " + this.getPublish() + " $,  " + this.getPrice();
+        // Example :
+        // The 7 Habits of Highly Effective People, Stephen R.Covey, 2004, $15.99
+    }
 }
